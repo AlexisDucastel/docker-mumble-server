@@ -1,0 +1,18 @@
+mumble-data:
+  labels:
+    io.rancher.container.start_once: 'true'
+  command:
+  - /bin/true
+  image: busybox
+  volumes:
+  - /data
+mumble-server:
+  ports:
+  - 64738:64738/tcp
+  - 64738:64738/udp
+  labels:
+    io.rancher.sidekicks: mumble-data
+    io.rancher.container.pull_image: always
+  image: aducastel/mumble-server
+  volumes_from:
+  - mumble-data

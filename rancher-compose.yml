@@ -1,0 +1,4 @@
+mumble-data:
+  scale: 1
+mumble-server:
+  scale: 1
