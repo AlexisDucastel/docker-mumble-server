@@ -12,8 +12,6 @@ RUN apt update && \
     && DEBIAN_FRONTEND=noninteractive apt install -y \
         busybox-syslogd \
         mumble-server \
-        zeroc-ice-all-dev \
-        zeroc-ice-all-runtime \
     && apt-get clean \
     && mkdir /data
 
